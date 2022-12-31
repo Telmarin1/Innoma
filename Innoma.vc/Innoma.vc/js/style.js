@@ -88,6 +88,12 @@ const openPopup = document.getElementById('open__popup');
 const closePopup = document.getElementById('close__popup');
 const popup = document.getElementById('popup');
 
+ closePopup.addEventListener('click', function (e) {
+     e.preventDefault();
+     popup.classList.remove('_active');
+     document.body.classList.remove('_lock');
+
+ })
 
 openPopup.addEventListener('click', function (e) {
     e.preventDefault();
@@ -101,11 +107,6 @@ openPopup.addEventListener('click', function (e) {
     document.body.classList.add('_lock');
 })
 
-// closePopup.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     popup.classList.remove('_active');
-//     document.body.classList.remove('_lock');
 
-// })
 
 
